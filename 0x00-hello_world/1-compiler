@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -s $CFILE -o $(echo "${CFILE//.c}").o
+gcc -c $CFILE -o $(echo "${CFILE//.c}").o
