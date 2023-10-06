@@ -2,7 +2,7 @@
 
 /**
  * main - print the size of each data types
- * 
+ *
  * Return: Always 0 (Success)
  */
 
