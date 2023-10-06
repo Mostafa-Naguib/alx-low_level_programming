@@ -9,12 +9,14 @@
 
 int main(void)
 {
+	int i, j;
 
-	for (int i = 0; i < 10; i++)
+
+	for (i = 0; i < 10; i++)
 	{
 		putchar(48 + i);
 	}
-	for (int j = 0; j < 5; j++)
+	for (j = 0; j < 5; j++)
 	{
 		putchar(97 + j);
 	}

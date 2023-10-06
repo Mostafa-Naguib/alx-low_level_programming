@@ -9,11 +9,13 @@
 
 int main(void)
 {
-	for (int i = 0; i < 26; i++)
+	int i, j;
+	
+	for (i = 0; i < 26; i++)
 	{
 		putchar(97 + i);
 	}
-	for (int j = 0; j < 26; j++)
+	for (j = 0; j < 26; j++)
 	{
 		putchar(65 + j);
 	}
