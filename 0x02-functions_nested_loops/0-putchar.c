@@ -1,17 +1,30 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Description: prints _putchar, followed by a new line.
+ *
+ * Return: Always 0 (Success)
+ */
 
 
 int main(void)
 {
 	char *str = "_putchar";
 	int i;
+	char chr;
 
-	for (i = 0; i < strlen(str); i++)
-	{
-		_putchar('A' + str[i]);
-	}
+	do {
+		chr = sentence[i];
+		if (chr != '\0')
+		{
+			_putchar(chr);
+			i++;
+		}
+	} while (chr != '\0')
+
+	putchar('\n');
 
 	return (0);
 }
