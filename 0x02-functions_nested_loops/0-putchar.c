@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	char *str = "_putchar";
+	char *sentence= "_putchar";
 	int i;
 	char chr;
 
