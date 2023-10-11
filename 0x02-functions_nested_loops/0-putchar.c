@@ -22,7 +22,7 @@ int main(void)
 			_putchar(chr);
 			i++;
 		}
-	} while (chr != '\0')
+	} while (chr != '\0');
 
 	putchar('\n');
 
