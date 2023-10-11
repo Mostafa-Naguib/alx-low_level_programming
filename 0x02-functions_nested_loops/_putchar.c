@@ -2,7 +2,7 @@
 #include "main.h"
 
 
-int putchar(int c)
+int _putchar(int c)
 {
 	putchar(c);
 
