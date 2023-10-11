@@ -12,7 +12,7 @@
 int main(void)
 {
 	char *sentence = "_putchar";
-	int i;
+	int i = 0;
 	char chr;
 
 	do {
