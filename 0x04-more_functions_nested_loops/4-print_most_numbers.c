@@ -18,7 +18,10 @@ void print_numbers(void)
 
 	for (; i <= 57; i++)
 	{
-		_putchar(i);
+		if (i != 2 && i != 4)
+		{
+			_putchar(i);
+		}
 	}
 	_putchar('\n');
 }
