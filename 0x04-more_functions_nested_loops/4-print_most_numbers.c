@@ -10,7 +10,11 @@
  *
  */
 
-
+int main(void)
+{
+    print_most_numbers();
+    return (0);
+}
 
 void print_numbers(void)
 {
