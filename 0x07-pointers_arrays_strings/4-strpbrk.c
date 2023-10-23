@@ -1,4 +1,4 @@
-#inlude "main.h"
+#include "main.h"
 
 /**
  * _strpbrk - A function that searches a string for any of a set of bytes.
