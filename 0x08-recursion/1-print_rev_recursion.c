@@ -4,7 +4,7 @@
 /**
  * _print_rev_recursion - function tha prints a string in reverse.t
  *
- * Description: function that prints a string in reverse. 
+ * Description: function that prints a string in reverse.
  * @s: The string
  *
  */

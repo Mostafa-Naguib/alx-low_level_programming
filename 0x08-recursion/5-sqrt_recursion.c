@@ -4,6 +4,7 @@ int sqrt_helper(int n, int x);
 
 /**
  * _sqrt_recursion - returns the natural square root of a number.
+ * _sqrt_helper - This function helps us to in square calculation
  *
  * Description: returns the natural square root of a number.
  * @n: The number
