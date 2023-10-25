@@ -14,18 +14,6 @@ int helper_prime_number(int n, int x);
  * Return: 0 (not a prime number) 1 (a prime number)
  */
 
-/**
- * helper_prime_number - checks if the number is prime or not
- *
- * Description: Checks if the number is prime or not
- * @n: The number
- * @x: is a counter
- *
- * Return: 0 (not a prime number) 1 (a prime number)
- */
-
-
-
 
 int is_prime_number(int n)
 {
