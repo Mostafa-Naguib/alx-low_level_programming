@@ -13,6 +13,18 @@ int sqrt_helper(int n, int x);
  */
 
 
+/**
+ * _sqrt_helper - This function helps us to in square calculation
+ *
+ * Description: This function helps us to in square calculation.
+ * @n: The number...
+ * @x: The counter...
+ *
+ * Return: The result...
+ */
+
+
+
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
