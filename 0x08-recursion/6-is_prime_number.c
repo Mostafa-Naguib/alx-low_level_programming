@@ -24,8 +24,6 @@ int is_prime_number(int n)
 }
 
 /**
- * is_prime_number - returns 1 if the input integer is a prime number,
- * otherwise return 0.
  * helper_prime_number - check if the number is prime or not
  *
  * Description: returns 1 if the input integer is a prime number,
