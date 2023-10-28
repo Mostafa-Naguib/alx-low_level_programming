@@ -3,11 +3,11 @@
 
 /**
  * main - prints its name, followed by a new line.
- * 
+ *
  * Description: prints its name, followed by a new line.
  * @argc: The number of argv
  * @argv: The array
- * 
+ *
  * Return: Always 0 (Success)
  */
 
