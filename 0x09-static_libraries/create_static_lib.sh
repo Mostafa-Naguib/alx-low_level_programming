@@ -9,5 +9,7 @@ done
 
 for file in *.o
 do
-	ar rc libmy.a "$file"
+	ar rc liball.a "$file"
 done
+
+
