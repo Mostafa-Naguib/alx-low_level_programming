@@ -8,10 +8,13 @@
  * @argc: The number of argv
  * @argv: The array
  *
+ * return: Always 0.
  */
 
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	printf("%s\n", argv[argc - argc]);
+
+	return (0);
 }
