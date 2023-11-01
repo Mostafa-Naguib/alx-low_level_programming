@@ -17,7 +17,7 @@ char *_strdup(char *str)
 	char *space;
 	int i;
 
-	if (string == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
@@ -34,5 +34,5 @@ char *_strdup(char *str)
 	for (i = 0; i < size; i++)
 		space[i] = str[i];
 
-	return (sapce);
+	return (space);
 }
