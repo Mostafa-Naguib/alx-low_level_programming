@@ -39,7 +39,7 @@ char *str_concat(char *s1, char *s2)
 		if (size < len1)
 			new[i] = s1[i];
 		else
-			new[i] = s2[size - i];
+			new[i] = s2[i - len1];
 	}
 	new[i] = '\0';
 
