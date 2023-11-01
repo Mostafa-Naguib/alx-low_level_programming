@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (i = 1; i < ac; i++, len++)
+	for (i = 0; i < ac; i++, len++)
 	{
 		len += strlen(av[i]);
 	}
@@ -31,7 +31,7 @@ char *argstostr(int ac, char **av)
 	if (string == 0)
 		return (NULL);
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		int word = strlen(av[i]);
 
