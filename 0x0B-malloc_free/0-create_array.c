@@ -22,9 +22,9 @@ char *create_array(unsigned int size, char c)
 		return (0);
 	}
 
-	while (szie--)
+	while (size--)
 	{
-		sace[size] = c;
+		space[size] = c;
 	}
 
 	return (space);
