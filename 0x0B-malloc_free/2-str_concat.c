@@ -13,19 +13,20 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int i;
+	int i, len1, len2, size;
+	char *new;
 
 	if (s1 == NULL)
 		s1 = '\0';
 	if (s2 == NULL)
 		s1 = '\0';
 
-	int len1 = strlen(s1);
-	int len2 = strlen(s2);
+	len1 = strlen(s1);
+	len2 = strlen(s2);
 
-	int size = len1 + len2;
+	size = len1 + len2;
 
-	char *new = malloc(size + 1);
+	new = malloc(size + 1);
 
 	if (new == NULL)
 	{
