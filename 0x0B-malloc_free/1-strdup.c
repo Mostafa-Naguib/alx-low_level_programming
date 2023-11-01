@@ -13,16 +13,15 @@
 
 char *_strdup(char *str)
 {
-	int size = 0;
+	int size, i;
 	char *space;
-	int i;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	for (; str[size] != '\0'; size++)
+	for (size = 0; str[size] != '\0'; size++)
 	;
 
 
