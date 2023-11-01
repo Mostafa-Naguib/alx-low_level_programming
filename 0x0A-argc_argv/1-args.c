@@ -16,7 +16,7 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%d\n", aprints the number of arguments passed into it.rgc - 1);
+	printf("%d\n", argc - 1);
 	argv = argv;
 	return (0);
 }
