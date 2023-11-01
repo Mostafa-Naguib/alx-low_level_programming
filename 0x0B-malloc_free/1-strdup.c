@@ -13,19 +13,26 @@
 
 char *_strdup(char *str)
 {
-	char *string = malloc(sizeof(str) * sizeof(str[0]) + 1);
+	int size = 0;
+	char *space;
+	int i;
 
 	if (string == NULL)
 	{
 		return (NULL);
 	}
 
-	if (str == NULL)
-	{
-		return (NULL);
-	}
+	for (; str[size] != '\0'; size++)
+	;
 
-	strcpy(string, str);
 
-	return (string);
+	space = malloc(size * sizeof(str) + 1);
+
+	if (space == NULL)
+		return (0);
+
+	for (i = 0; i < size; i++)
+		space[i] = str[i];
+
+	return (sapce);
 }

@@ -17,9 +17,14 @@ char *create_array(unsigned int size, char c)
 {
 	char *space = malloc(size * sizeof(c));
 
-	if (space == NULL)
+	if (size == 0 || space == 0)
 	{
-		return (NULL);
+		return (0);
+	}
+
+	while (szie--)
+	{
+		sace[size] = c;
 	}
 
 	return (space);
