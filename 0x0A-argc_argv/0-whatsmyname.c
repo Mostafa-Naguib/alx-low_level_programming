@@ -8,7 +8,7 @@
  * @argc: The number of argv
  * @argv: The array
  *
- * return: Always 0.
+ * Return: 0 (success)
  */
 
 
