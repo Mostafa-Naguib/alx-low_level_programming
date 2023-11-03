@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h> 
+#include <stdio.h>
 
 
 /**
@@ -14,7 +14,6 @@
  * Return: The string
  */
 
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 
@@ -22,7 +21,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *str;
 	unsigned int memory;
 	unsigned int len1;
-	unsigned int len2;
 
 	if (s1 == NULL)
 	{
@@ -34,10 +32,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	len1 = strlen(s1);
-	len2 = strlen(s2);
 
 	memory = len1 + n;
-	
+
 	str = malloc(memory + 1);
 	if (str == NULL)
 		return (NULL);
