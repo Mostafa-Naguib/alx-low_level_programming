@@ -12,14 +12,28 @@
  * Return: The string
  */
 
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 
 	int i = 0;
 	char *str;
 	int memory;
-	int len1 = strlen(s1);
-	unsigned int len2 = strlen(s2);
+	int len1;
+	unsigned int len2;
+
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+
 
 	
 	if (n > len2)
