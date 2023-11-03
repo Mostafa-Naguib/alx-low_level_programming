@@ -45,7 +45,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (i = 0; i < memory; i++)
 	{
-		if ((len1 + len2) < memory)
+		if ((len1 + len2) < i)
 			break;
 
 		if (i < len1)
