@@ -36,12 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 
 	
-	if (n >= len2)
-		memory = len1 + len2;
-	else
-		memory = len1 + n;
-
-	str = malloc(memory + 1);
+	str = malloc(len1 + n + 1);
 	if (str == 0)
 	{
 		return (0);
@@ -49,6 +44,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (i = 0; i < memory; i++)
 	{
+		if (len1 + len2 < memory)
+			break;
+
 		if (i < len1)
 		{
 			str[i] = s1[i];
