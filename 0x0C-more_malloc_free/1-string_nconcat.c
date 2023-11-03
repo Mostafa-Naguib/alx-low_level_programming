@@ -13,15 +13,14 @@
  */
 
 
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 
-	int i = 0;
+	unsigned int i = 0;
 	char *str;
-	int memory;
-	int len1;
-	int len2;
+	unsigned int memory;
+	unsigned int len1;
+	unsigned int len2;
 
 	if (s1 == NULL)
 	{
