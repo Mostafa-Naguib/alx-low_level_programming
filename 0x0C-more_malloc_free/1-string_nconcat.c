@@ -39,23 +39,17 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	
 	str = malloc(memory + 1);
 	if (str == NULL)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; i < memory; i++)
 	{
-		if ((len1 + len2) < i)
+		if ((len1 + n) < i || (len1 + len2) < i)
 			break;
 
 		if (i < len1)
-		{
 			str[i] = s1[i];
-		}
 		else
-		{
 			str[i] = s2[i - len1];
-		}
 	}
 
 	str[memory + 1] = '\0';
