@@ -13,11 +13,10 @@ void rev_string(char *s)
 {
 	int i;
 	int l = 0;
+	char *s
 
 	while (s[l])
 		l++;
-
-	char *ptr = malloc(l + 1);
 
 	for (i = 0; i <= l; i++)
 	{
