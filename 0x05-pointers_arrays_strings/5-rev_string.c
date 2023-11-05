@@ -13,19 +13,19 @@ void rev_string(char *s)
 {
 	int i;
 	int l = 0;
-	char *s
+	char *tmp
 
 	while (s[l])
 		l++;
 
 	for (i = 0; i <= l; i++)
 	{
-		ptr[i] = s[i];
+		tmp[i] = s[i];
 	}
 
 	for (i = l; i >= 0; i--)
 	{
-		s[l + 1 - i - 1] = ptr[i];
+		s[l + 1 - i - 1] = tmp[i];
 	}
 
 }
