@@ -16,3 +16,13 @@
 ---> 102-fibonacci.c
 ---> 103-fibonacci.c
 ---> 104-fibonacci.c
+
+
+0x04. C - More functions, more nested loops
+----> 100-prime_factor.c
+----> 101-print_number.c
+
+
+0x05. C - Pointers, arrays and strings
+---> 100-atoi.c
+---> 101-keygen.c
