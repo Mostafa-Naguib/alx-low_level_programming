@@ -12,6 +12,21 @@
 
 int _strlen(char *s)
 {
-	return (strlen(s));
+	int i = 0;
+	char checker = '0';
+	int num = 0;
+
+	while (1)
+	{
+		checker = s[i];
+		if (checker == '\0')
+		{
+			break;
+		}
+		i++;
+		num++;
+	}
+
+	return (num);
 }
 

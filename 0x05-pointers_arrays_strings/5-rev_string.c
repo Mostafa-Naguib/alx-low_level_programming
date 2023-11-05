@@ -9,16 +9,16 @@
  */
 
 
-void rev_string(char *s)
+void print_rev(char *s)
 {
-	int i = strlen(s) - 1;
-	char *ptr = malloc(i + 1);
+	int i = 0;
 
-	strcpy(ptr, s);
-	for (; i >= 0; i--)
+	while (s [i])
+		i++;
+
+	while (i--)
 	{
-		s[strlen(s) - i - 1] = ptr[i];
+		_putchar (s[i] ) ;
 	}
-	s[strlen(s)] = '\0';
-}
-
+	_putchar ('\n') ;
+} 
