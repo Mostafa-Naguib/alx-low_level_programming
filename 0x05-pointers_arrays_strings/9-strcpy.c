@@ -17,7 +17,7 @@
 char *_strcpy(char *dest, char *src)
 {
 	unsigned int i = 0;
-	int = l;
+	unsigned int l;
 
 	for (l = 0; src[l] != '\0'; l++)
 		;

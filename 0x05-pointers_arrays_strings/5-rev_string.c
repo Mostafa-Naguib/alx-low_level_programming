@@ -9,16 +9,16 @@
  */
 
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int i = 0;
 
-	while (s [i])
+	while (s[i])
 		i++;
 
 	while (i--)
 	{
-		_putchar (s[i] ) ;
+		_putchar (s[i]);
 	}
-	_putchar ('\n') ;
+	_putchar ('\n');
 } 
