@@ -42,7 +42,7 @@ char *argstostr(int ac, char **av)
 		string[j] = '\n';
 		j++;
 	}
-	
+
 	string[j] = '\0';
 	return (string);
 }

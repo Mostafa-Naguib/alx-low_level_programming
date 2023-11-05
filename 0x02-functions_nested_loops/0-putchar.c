@@ -24,7 +24,7 @@ int main(void)
 		}
 	} while (chr != '\0');
 
-	putchar('\n');
+	_putchar('\n');
 
 	return (0);
 }
