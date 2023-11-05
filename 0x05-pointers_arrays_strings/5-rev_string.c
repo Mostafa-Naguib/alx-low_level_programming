@@ -11,14 +11,22 @@
 
 void rev_string(char *s)
 {
-	int i = 0;
+	int i;
+	int l = 0;
 
-	while (s[i])
-		i++;
+	while (s[l])
+		l++;
 
-	while (i--)
+	char *ptr = malloc(l + 1);
+
+	for (i = 0; i <= l; i++)
 	{
-		_putchar (s[i]);
+		ptr[i] = s[i];
 	}
-	_putchar ('\n');
-} 
+
+	for (i = l; i >= 0; i--)
+	{
+		s[l + 1 - i - 1] = ptr[i];
+	}
+
+}
