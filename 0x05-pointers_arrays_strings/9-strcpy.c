@@ -11,22 +11,18 @@
  * @dest: the destination that you want to store src in it.
  * @src: the string.
  *
- * Return: src
+ * Return: dest
  */
 
 char *_strcpy(char *dest, char *src)
 {
-	unsigned int i = 0;
-	unsigned int l;
+	int i = 0;
 
-	for (l = 0; src[l] != '\0'; l++)
-		;
-
-	for (; i <= l; i++)
-	{
+	for (; src[i]; i++)
 		dest[i] = src[i];
-	}
 
-	return (src);
+	dest[i] = '\0';
+
+	return (dest);
 }
 

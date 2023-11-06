@@ -7,37 +7,39 @@ int _strlen(char *s);
  *
  * Description: a function that creates a new dog.
  * @name: The name of the dog
- * @age: The age of the dog 
+ * @age: The age of the dog
  * @owner: The owner of the dog
  *
  * Return: A new dog
  */
 
-int main(void)
-{
-    dog_t *my_dog;
-
-    my_dog = new_dog("Poppy", 3.5, "Bob");
-    printf("My name is %s, and I am %.1f :) - Woof!\n", my_dog->name, my_dog->age);
-    return (0);
-}
-
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int len_name;
-	int len_owner;
+	dog_t *puppy;
 
 	if (!name || age < 0 || !owner)
 		return (NULL);
 
-	len_name = _strlen(name) + 1;
-	len_owner = _strlen(owner) + 1;
+	puppy = (dog_t *) malloc(sizeof(dog_t));
+	if (!puppy)
+		return (0);
 
-	dog_t *puppy;
+	puppy->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if (!puppy->name)
+	{
+		free(puppy);
+		return (0);
+	}
 
-	puppy->name = malloc(len_name);
-	puppy->owner = malloc(len_owner);
+	puppy->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if (!puppy->owner)
+	{
+		free(puppy->name);
+		free(puppy);
+		return (0);
+	}
+
 	_strcpy(puppy->name, name);
 	_strcpy(puppy->owner, owner);
 	puppy->age = age;
@@ -45,22 +47,40 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return (puppy);
 }
 
-
+/**
+ * _strcpy - a function that copies the string pointed to by src,
+ * including the terminating null byte (\0), to the buffer pointed to by dest.
+ *
+ * Description: a function that copies the string pointed to by src,
+ * including the terminating null byte (\0), to the buffer pointed to by dest.
+ *
+ * @dest: the destination that you want to store src in it.
+ * @src: the string.
+ *
+ * Return: dest
+ */
 
 char *_strcpy(char *dest, char *src)
 {
-	unsigned int i = 0;
-	unsigned int l;
+	int i = 0;
 
-	for (l = 0; src[l] != '\0'; l++)
-		;
-
-	for (; i <= l; i++)
+	for (; src[i]; i++)
 		dest[i] = src[i];
 
-	return (src);
+	dest[i] = '\0';
+
+	return (dest);
 }
 
+
+/**
+ * _strlen - A function that returns the length of a string..
+ *
+ * Description: A function that returns the length of a string.
+ * @s: the string that you want to count...
+ *
+ * Return: The length of the string
+ */
 
 int _strlen(char *s)
 {
