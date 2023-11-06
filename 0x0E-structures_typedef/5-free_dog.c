@@ -1,4 +1,4 @@
-#include "main.h"
+#include "dog.h"
 
 /**
  * free_dogs - a function that frees dogs.
