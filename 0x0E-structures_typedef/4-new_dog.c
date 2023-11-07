@@ -13,17 +13,17 @@ int _strlen(char *s);
  * Return: A new dog
  */
 
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *puppy;
-
-	if (!name || age < 0 || !owner)
-		return (NULL);
-
-	puppy = malloc(sizeof(dog_t));
+	dog_t *puppy = malloc(sizeof(dog_t));
 	if (!puppy)
 		return (0);
+
+	if (!name || age < 0 || !owner)
+	{
+		free(puppy);
+		return (NULL);
+	}
 
 	puppy->name = malloc(sizeof(char) * (_strlen(name) + 1));
 	if (!puppy->name)
