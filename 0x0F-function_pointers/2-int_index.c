@@ -23,9 +23,11 @@ int int_index(int *array, int size, int (*cmp)(int))
 	if (array || cmp)
 	{
 		while (array < end)
+		{
 			result = cmp(*array++);
 			if (result)
 				return (result);
+		}
 	}
 
 	return (-1);
