@@ -12,23 +12,22 @@
  * Return: The index of the first element match...
  */
 
+
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int *end = array + size;
-	int result;
+	int i;
 
 	if (size <= 0)
 		return (-1);
 
 	if (array || cmp)
 	{
-		while (array < end)
+		for (i = 0; i < size; i++)
 		{
-			result = cmp(*array++);
-			if (result)
-				return (result);
+			if (cmp(array[i]))
+				return (i);
 		}
-		return (-1);
 	}
 
+	return (-1);
 }
