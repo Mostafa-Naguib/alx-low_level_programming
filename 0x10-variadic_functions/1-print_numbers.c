@@ -18,7 +18,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 
 	if (!separator)
-		separator = "\n";
+		separator = "";
 	if (!n)
 	{
 		printf("\n");
