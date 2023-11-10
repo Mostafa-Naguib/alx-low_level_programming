@@ -9,26 +9,37 @@
  *
  */
 
+#include "variadic_functions.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	if (!separator)
-		separator = "\n";
-	if (!n)
-		printf("\n");
-		return;
-
+	unsigned int i;
 	va_list args;
 
 	va_start(args, n);
-	int i;
+
+
+	if (!separator)
+		separator = "\n";
+	if (!n)
+	{
+		printf("\n");
+		return;
+	}
+
 
 	for (i = 0; i < n; i++)
 	{
 		int num = va_arg(args, int);
 
 		if (i < n - 1)
-			printf("%d%s", n, separator);
+			printf("%d%s", num, separator);
 	}
 	printf("\n");
 
