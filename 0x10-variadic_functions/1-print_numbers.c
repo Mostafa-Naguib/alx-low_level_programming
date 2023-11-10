@@ -9,14 +9,6 @@
  *
  */
 
-#include "variadic_functions.h"
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
@@ -38,8 +30,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		int num = va_arg(args, int);
 
+		printf("%d", num);
 		if (i < n - 1)
-			printf("%d%s", num, separator);
+			printf("%s", separator);
 	}
 	printf("\n");
 
