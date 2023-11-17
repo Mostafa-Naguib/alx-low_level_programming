@@ -11,23 +11,29 @@
  * Return: substring fo corresponding pattern.
  */
 
-char *_strpbrk(char *s, char *accept)
+
+char *_strstr(char *haystack, char *needle)
 {
-	int len_1 = strlen(s);
-	int len_2 = strlen(accept);
-	int i, j;
+    if (*needle == '\0')
+        return (haystack);
 
-	for (i = 0; i < len_1; i++)
+    while (*haystack != '\0')
 	{
-		for (j = 0; j < len_2; j++)
-		{
-			if (s[i] == accept[j])
-			{
-				return (s + i);
-			}
-		}
-	}
+        char *h = haystack;
+        char *n = needle;
 
-	return (NULL);
+        while (*n != '\0' && *h == *n)
+		{
+            h++;
+            n++;
+        }
+
+        if (*n == '\0')
+            return (haystack);
+
+        haystack++;
+    }
+
+    return (NULL);
 }
 
