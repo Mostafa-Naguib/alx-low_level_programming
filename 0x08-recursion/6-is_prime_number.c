@@ -18,7 +18,7 @@ int is_prime_number(int n)
 	if (n == 1)
 		return (0);
 
-	return (helper_prime_number(n, 1));
+	return (helper_prime_number(n, 2));
 }
 
 /**
