@@ -20,9 +20,9 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if (_atoi(argv[i]))
+		if (atoi(argv[i]))
 		{
-			sum += _atoi(argv[i]);
+			sum += atoi(argv[i]);
 		}
 		else
 		{
