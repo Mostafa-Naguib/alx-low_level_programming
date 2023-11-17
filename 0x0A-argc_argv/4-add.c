@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 int _atoi(char *s);
 
 /**
@@ -27,7 +26,8 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			return (printf("Error\n"), 1);
+			printf("Error\n");
+			return (1);
 		}
 	}
 	printf("%d\n", sum);
