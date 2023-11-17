@@ -2,27 +2,6 @@
 
 int helper_palindrome(char *s, int start, int len);
 
-#include <stdio.h>
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    int r;
-
-    r = is_palindrome("level");
-    printf("%d\n", r);
-    r = is_palindrome("redder");
-    printf("%d\n", r);
-    r = is_palindrome("test");
-    printf("%d\n", r);
-    r = is_palindrome("step on no pets");
-    printf("%d\n", r);
-    return (0);
-}
 
 /**
  * is_palindrome - returns 1 if a string is a palindrome and 0 if not.
