@@ -1,5 +1,5 @@
-int helper_prime_number(int n, int x);
 #include "main.h"
+int helper_prime_number(int n, int x);
 
 /**
  * is_prime_number - returns 1 if the input integer is a prime number,
@@ -15,7 +15,10 @@ int helper_prime_number(int n, int x);
 
 int is_prime_number(int n)
 {
-	return (helper_prime_number(n, 0));
+	if (n == 1)
+		return (0);
+
+	return (helper_prime_number(n, 1));
 }
 
 /**
