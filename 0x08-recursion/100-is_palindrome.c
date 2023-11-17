@@ -15,10 +15,7 @@ int helper_palindrome(char *s, int start, int len);
 
 int is_palindrome(char *s)
 {
-	int len;
-
-	for (len = 0; s[len] != '\0'; len++)
-		;
+	int len = _strlen(s);
 
 	return (helper_palindrome(s, 0, len));
 }
