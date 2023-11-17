@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 int _atoi(char *s);
 
 /**
@@ -15,18 +16,25 @@ int _atoi(char *s);
 
 int main(int argc, char *argv[])
 {
-	if (argc == 3)
-	{
-		printf("%d\n", _atoi(argv[1]) * _atoi(argv[2]));
-		return (0);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
+	int i;
+	int sum = 0;
 
+	for (i = 1; i < argc; i++)
+	{
+		if (_atoi(argv[i]))
+		{
+			sum += _atoi(argv[i]);
+		}
+		else
+		{
+			return (printf("Error\n"), 1);
+		}
+	}
+	printf("%d\n", sum);
+
+	return (0);
 }
+
 
 /**
  * _atoi - Convert string to int
@@ -36,7 +44,6 @@ int main(int argc, char *argv[])
  *
  * Return: The integer number
  */
-
 
 int _atoi(char *s)
 {
