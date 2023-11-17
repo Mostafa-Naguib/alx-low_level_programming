@@ -2,6 +2,27 @@
 
 int helper_palindrome(char *s, int start, int len);
 
+#include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = is_palindrome("level");
+    printf("%d\n", r);
+    r = is_palindrome("redder");
+    printf("%d\n", r);
+    r = is_palindrome("test");
+    printf("%d\n", r);
+    r = is_palindrome("step on no pets");
+    printf("%d\n", r);
+    return (0);
+}
 
 /**
  * is_palindrome - returns 1 if a string is a palindrome and 0 if not.
@@ -15,9 +36,9 @@ int helper_palindrome(char *s, int start, int len);
 
 int is_palindrome(char *s)
 {
-	int len = _strlen(s);
+	int i = _strlen(s);
 
-	return (helper_palindrome(s, 0, len));
+	return (helper_palindrome(s, 0, i));
 }
 
 /**
@@ -44,6 +65,26 @@ int helper_palindrome(char *s, int start, int len)
 	}
 
 	return (helper_palindrome(s, start + 1, len));
+}
+
+/**
+ * _strlen - A function that returns the length of a string..
+ *
+ * Description: A function that returns the length of a string.
+ * @s: the string that you want to count...
+ *
+ * Return: The length of the string
+ */
+
+
+int _strlen(char *s)
+{
+	int i = 0;
+
+	for (; s[i] != '\0'; i++)
+		;
+
+	return (i);
 }
 
 
