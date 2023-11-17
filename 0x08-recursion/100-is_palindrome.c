@@ -56,14 +56,14 @@ int helper_palindrome(char *s, int start, int len)
  */
 
 
-int _strlen(char *s)
+int _strlen(char *s, i = 0)
 {
 
-	if (s == NULL)
+	if (s[i] == NULL)
 		return (i);
 
 
-	return _strlen(s[1]);
+	return _strlen(s, i + 1);
 }
 
 
