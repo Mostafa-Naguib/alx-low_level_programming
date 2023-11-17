@@ -13,8 +13,21 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	char *match = strpbrk(s, accept);
+	int len_1 = strlen(s);
+	int len_2 = strlen(accept);
+	int i, j;
 
-	return (match);
+	for (i = 0; i < len_1; i++)
+	{
+		for (j = 0; j < len_2; j++)
+		{
+			if (s[i] == accept[j])
+			{
+				return (s + i);
+			}
+		}
+	}
+
+	return (NULL);
 }
 
