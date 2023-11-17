@@ -58,12 +58,12 @@ int helper_palindrome(char *s, int start, int len)
 
 int _strlen(char *s)
 {
-	int i = 0;
 
-	for (; s[i] != '\0'; i++)
-		;
+	if (s == NULL)
+		return (i);
 
-	return (i);
+
+	return _strlen(s[1]);
 }
 
 
