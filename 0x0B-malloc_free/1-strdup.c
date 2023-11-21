@@ -14,7 +14,7 @@
 char *_strdup(char *str)
 {
 	int size;
-	char *space;
+	char *space, *tmp_space;
 
 	if (str == NULL)
 		return (NULL);
@@ -27,11 +27,12 @@ char *_strdup(char *str)
 	if (space == NULL)
 		return (0);
 
-	while (*str != '\0')
+	while (*str != NULL)
 	{
-		*space++ = *str++;
+		tmp_space = space;
+		*tmp_space++ = *str++;
 		str++;
-		space++;
+		tmp_space++;
 	}
 
 	return (space);
