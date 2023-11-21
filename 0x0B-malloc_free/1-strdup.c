@@ -31,8 +31,6 @@ char *_strdup(char *str)
 	while (*tmp_space != '\0')
 	{
 		*tmp_space++ = *str++;
-		str++;
-		tmp_space++;
 	}
 
 	return (space);
