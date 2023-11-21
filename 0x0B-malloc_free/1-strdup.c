@@ -27,7 +27,7 @@ char *_strdup(char *str)
 	if (space == NULL)
 		return (0);
 
-	while (*str != NULL)
+	while (*tmp_space != '\0')
 	{
 		tmp_space = space;
 		*tmp_space++ = *str++;
