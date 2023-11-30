@@ -21,9 +21,7 @@ int sum_them_all(const unsigned int n, ...)
 		return (0);
 
 	while (n--)
-	{
-		sum += va_arg(ptr, n);
-	}
+		sum += va_arg(ptr, int);
 
 	va_end(ptr);
 	return (sum);
