@@ -58,16 +58,4 @@ void print_int(int num)
 	}
 }
 
-/**
- * _putchar - For printting a character
- *
- * @c: The character
- *
- * Return: -1 on error (EOF --> End-Of-File indicator)
- */
-
-int _putchar(int c)
-{
-	return (write(1, &c, 1));
-}
 
