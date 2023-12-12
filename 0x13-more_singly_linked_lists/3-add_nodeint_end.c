@@ -3,7 +3,7 @@
 /**
  * add_nodeint_end - Adds a new node at the end of a listint_t list.
  *
- * @head: The head of linked list.
+ * @head: The pointer of the linked list's head.
  * @n: The number of new_node.
  *
  * Return: The address of the new element, or NULL if it failed
