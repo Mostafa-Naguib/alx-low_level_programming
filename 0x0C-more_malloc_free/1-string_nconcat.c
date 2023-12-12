@@ -2,7 +2,6 @@
 
 int _strlen(char *s);
 
-
 /**
  * string_nconcat - A function that concatenates two strings.
  *
