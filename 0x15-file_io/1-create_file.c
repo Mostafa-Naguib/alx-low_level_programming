@@ -23,8 +23,8 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 
-	byte_read = write(fd, text_content, len);
-	if (byte_read != len)
+	byte_write = write(fd, text_content, len);
+	if (byte_write != len)
 		return (-1);
 
 	close(fd);
