@@ -12,21 +12,21 @@ int _strlen(char *s);
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-    int fd;
-    size_t len = _strlen(text_content), bytes_wrote;
+	int fd;
+	size_t len = _strlen(text_content);
 
-    if (!filename)
-        return (0);
+	if (!filename)
+		return (-1);
 
-    fd = open(filename, O_WRONLY | O_APPEND);
-    if (fd == -1)
-        return (0);
+	fd = open(filename, O_WRONLY | O_APPEND);
+	if (fd == -1)
+		return (-1);
 
-    if (len)
-        bytes_wrote = write(fd, text_content, len);
+	if (len)
+		write(fd, text_content, len);
 
-    close(fd);
-    return(1);
+	close(fd);
+	return (1);
 }
 
 
