@@ -1,5 +1,5 @@
 #include "main.h"
-int _strlen(char *s);
+size_t _strlen(char *s);
 
 /**
  * create_file - A function that creates a file.
@@ -23,14 +23,7 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 
-
 	bytes_wrote = write(fd, text_content, len);
-
-	if (bytes_wrote != len)
-	{
-		close(fd);
-		return (-1);
-	}
 
 	close(fd);
 	return (1);
@@ -46,9 +39,9 @@ int create_file(const char *filename, char *text_content)
  * Return: The length of the string
  */
 
-int _strlen(char *s)
+size_t _strlen(char *s)
 {
-	int i = 0;
+	size_t i = 0;
 
 	if (!s)
 		return (0);
