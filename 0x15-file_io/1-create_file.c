@@ -13,8 +13,8 @@ int _strlen(char *s);
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	int len = _strlen(text_content);
-	int byte_read;
+	size_t len = strlen(text_content);
+	size_t byte_read;
 
 	if (!filename)
 		return (-1);
@@ -24,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	byte_read = write(fd, text_content, len);
-	if (byte_read == -1)
+	if (byte_read != len)
 		return (-1);
 
 	close(fd);
