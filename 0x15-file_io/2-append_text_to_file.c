@@ -13,7 +13,7 @@ int _strlen(char *s);
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd;
-	size_t len = _strlen(text_content);
+	size_t len = _strlen(text_content), bytes_wrote = 0;
 
 	if (!filename)
 		return (-1);
@@ -23,7 +23,13 @@ int append_text_to_file(const char *filename, char *text_content)
 		return (-1);
 
 	if (len)
-		write(fd, text_content, len);
+		bytes_wrote = write(fd, text_content, len);
+
+	if (bytes_wrote != len)
+	{
+		close(fd);
+		return (-1);
+	}
 
 	close(fd);
 	return (1);
@@ -42,6 +48,9 @@ int append_text_to_file(const char *filename, char *text_content)
 int _strlen(char *s)
 {
 	int i = 0;
+
+	if (!s)
+		return (0);
 
 	for (; s[i] != '\0'; i++)
 		;
