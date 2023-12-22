@@ -48,9 +48,9 @@ void main(int argc, char *argv[])
 
 	fd_src = close(fd_src);
 	if (fd_src)
-		dprintf("Error: Can't close fd %zu\n", fd_src), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd_src), exit(100);
 
 	fd_dest = close(fd_dest);
 	if (fd_dest)
-		dprintf("Error: Can't close fd %zu\n", fd_src), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd_src), exit(100);
 }

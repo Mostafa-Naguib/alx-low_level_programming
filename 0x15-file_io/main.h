@@ -4,6 +4,7 @@
 #define BUFFER_SIZE 1024
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <unistd.h> /* UNIX OR POSIX Standard Library */
 #include <fcntl.h>  /* File Control Library */
 #include <sys/types.h>
