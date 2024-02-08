@@ -16,31 +16,33 @@ int main(int argc, char *argv[])
 {
 	int fd_src, fd_dest;
 	char *buffer[BUFFER_SIZE];
-	ssize_t bytes_wrote, bytes_read;
+	ssize_t bytes_read;
+	mode_t permissions = 0664;
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 
 
-	fd_src = open(argv[1], O_RDWR);
+	fd_src = open(argv[1], O_RDONLY);
 	if (fd_src == -1)
 		dprintf(STDERR_FILENO, ERR_SRC, argv[1]), exit(98);
 
 
-	fd_dest = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	fd_dest = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, permissions);
 	if (fd_dest == -1)
 		dprintf(STDERR_FILENO, ERR_DEST, argv[2]), exit(99);
 
+	while ((bytes_read = read(fd_src, buffer, BUFFER_SIZE)) > 0)
+    {
+	    if (write(fd_dest, buffer, bytes_read) != bytes_read)
+        {
+            dprintf(STDERR_FILENO, ERR_DEST, argv[2]);
+            exit(99);
+        }
+    }
 
-	bytes_read = read(fd_src, buffer, BUFFER_SIZE);
 	if (bytes_read == -1)
 		dprintf(STDERR_FILENO, ERR_SRC, argv[1]), exit(98);
-
-
-	bytes_wrote = write(fd_dest, buffer, bytes_read);
-	if (bytes_wrote != bytes_read)
-		dprintf(STDERR_FILENO, ERR_DEST, argv[2]), exit(99);
-
 
 	fd_src = close(fd_src);
 	if (fd_src)
